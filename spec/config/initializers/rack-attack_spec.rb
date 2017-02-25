@@ -8,9 +8,10 @@ describe Rack::Attack do
   end
 
   let(:limit) { 100 }
-  let(:frozen_time) { '03/02/2018 10:00AM'.to_datetime }
+  let(:frozen_time) { '03/02/2018 10:00AM'.to_datetime } # A particular time chosen to ensure timing is consistent between tests
   let(:test_path) { 'home/index' }
 
+  # Use the same time before each test
   before(:each) do
     Timecop.freeze frozen_time
   end
