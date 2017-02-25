@@ -39,6 +39,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem 'rack-test', require: 'rack/test' # Add spec methods to be used for rack attack
+  gem 'timecop' # Helps test time specific specs
 end
 
 group :development do
